@@ -8,7 +8,7 @@ function login() {
   const savedPassword = "123456";
 
   // ERROR INTENCIONAL
-  if (email === savedEmail || password === savedPassword) {
+  if (email === savedEmail && password === savedPassword) {
     message.innerText = "Login successful";
   } else {
     message.innerText = "Invalid credentials";
