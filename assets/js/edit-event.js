@@ -6,10 +6,7 @@ function updateEvent() {
 
   const message = document.getElementById("message");
 
-  // ERROR INTENCIONAL
-  // Permite actualizar eventos sin título
-
-  if (date !== "" && location !== "" && description !== "") {
+  if (title !== "" && date !== "" && location !== "" && description !== "") {
     message.style.color = "green";
     message.innerText = "Event updated successfully";
   } else {
