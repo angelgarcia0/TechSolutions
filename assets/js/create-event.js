@@ -6,12 +6,16 @@ function createEvent() {
 
   const message = document.getElementById("message");
 
-  // ERROR INTENCIONAL
-  // Permite crear eventos con fechas pasadas
+  const currentDate = new Date().toISOString().split("T")[0];
 
   if (title !== "" && date !== "" && location !== "" && description !== "") {
-    message.style.color = "green";
-    message.innerText = "Event created successfully";
+    if (date >= currentDate) {
+      message.style.color = "green";
+      message.innerText = "Event created successfully";
+    } else {
+      message.style.color = "red";
+      message.innerText = "Event date cannot be in the past";
+    }
   } else {
     message.style.color = "red";
     message.innerText = "All fields are required";
