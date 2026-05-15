@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Event</title>
+
+    <link rel="stylesheet" href="../assets/css/edit-event.css" />
+  </head>
+  <body>
+    <div class="event-container">
+      <h1>Edit Academic Event</h1>
+
+      <input type="text" id="title" value="Software Development Conference" />
+
+      <input type="date" id="date" value="2026-06-20" />
+
+      <input type="text" id="location" value="TechSolutions Auditorium" />
+
+      <textarea id="description">
+Technology and software development event.
+    </textarea
+      >
+
+      <button onclick="updateEvent()">Update Event</button>
+
+      <p id="message"></p>
+    </div>
+
+    <script src="../assets/js/edit-event.js"></script>
+  </body>
+</html>
